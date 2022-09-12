@@ -18,14 +18,20 @@ const App = () => {
   const [deleteMode, setDeleteMode] = useState(null);
   const timestamp = new Date();
 
+  const [fetchErorr, setFetchError] = useState(false);
+
   useEffect(() => {
     async function fetchUsersApi() {
-      const data = await fetchUsers();
-      console.log(data);
-      if (data === []) {
-        setUsers('');
+      const { error, res } = await fetchUsers();
+
+      if (error) {
+        setFetchError(true);
+        setUsers([]);
+      } else {
+        setFetchError(false);
+        console.log('res: ', res);
+        setUsers(res);
       }
-      setUsers(data);
     }
 
     fetchUsersApi();
@@ -164,7 +170,7 @@ const App = () => {
             <div className="col email">Email</div>
             <div className="col data">Data</div>
           </div>
-          {renderUsers()}
+          {fetchErorr ? <div className="error">Failed to fetch</div> : renderUsers()}
         </div>
       </div>
     </div>

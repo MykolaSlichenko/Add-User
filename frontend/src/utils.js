@@ -3,10 +3,10 @@ const BASE_URL = 'http://localhost:4000';
 export const fetchUsers = async () => {
   try {
     const res = await fetch(`${BASE_URL}/api/user/users`);
-    return await res.json();
+    const data = await res.json();
+    return { error: false, res: data }
   } catch (e) {
-    console.error('Failed to fetchUsers, e: ', e);
-    return [];
+    return { error: true, res: [] }
   }
 };
 
@@ -21,7 +21,7 @@ export const postUser = async (data) => {
     const res = await fetch(`${BASE_URL}/api/user`, options);
     return await res.json();
   } catch (e) {
-    console.error('Failed to postUser, e: ', e);
+    // console.error('Failed to postUser, e: ', e);
   }
 };
 
@@ -36,7 +36,7 @@ export const putUser = async (userName, data) => {
     const res = await fetch(`${BASE_URL}/api/user/${userName}`, options);
     return await res.json();
   } catch (e) {
-    console.error('Failed to putUser, e: ', e);
+    // console.error('Failed to putUser, e: ', e);
   }
 };
 
