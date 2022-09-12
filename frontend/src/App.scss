@@ -2,12 +2,12 @@
   text-align: center;
   .button {
     font-size: 16px;
-    background-color: rgb(41, 255, 30);
+    background-color: rgb(210, 205, 209);
     color: #000000;
     border: none;
-    padding: 10px 18px;
+    padding: 8px 16px;
     cursor: pointer;
-    margin: 16px;
+    margin: 10px;
   }
   .button:hover {
     background-color: #ffff28;
@@ -19,8 +19,10 @@
     margin: 25px;
     display: flex;
     flex-direction: row;
+    background-color: darkgray;
     .col {
       width: 25%;
+      padding-top: 5px;
     }
   }
   .row.table-header {
@@ -87,6 +89,17 @@ p {
   padding: 0 60px 0 60px;
 }
 
+.edit-button {
+  //background-color: #6b6e71;
+}
+.addButton {
+  background-color: #6b6e71;
+  color: rgb(40, 42, 45);
+}
+.addButton:hover {
+  background-color: rgb(173, 167, 171);
+}
+
 .removeButton {
   background-color: #6b6e71;
   color: rgb(40, 42, 45);
@@ -97,7 +110,33 @@ p {
 }
 .cols {
   text-align: center;
+  display: inherit;
+  .logo {
+    height: 20px;
+    width: 20px;
+  }
   .delete-button{
     margin: 0 10px;
+  }
+  .edit-button{
+    margin: 0 10px;
+  }
+  .confirm-button {
+    background-color: #dc0800;
+    //margin: -5px;
+    width: 100px;
+    //height: 28px;
+    font-size: 16px;
+    color: #f7f7f7;
+    border: none;
+  }
+  .save-button {
+    background-color: #32dc28;
+    //margin: -5px;
+    width: 100px;
+    //height: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
   }
 }
