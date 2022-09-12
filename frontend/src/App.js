@@ -109,7 +109,6 @@ const App = () => {
 
           //user_name
           const isUserNameValid = user_name.trim().length > 0;
-          // const isEmailValid = email.match(/\S+@\S+\.\S+/).trim().length > 0;
 
           const validateEmail = (email) => {
             return String(email)
@@ -119,20 +118,9 @@ const App = () => {
               );
           };
 
-
-          // const isValidEmail = email.match(/^\S+@\S+\.\S+$/);
-          console.log(validateEmail(email), 'validateEmail');
-
+          // console.log(validateEmail(email), 'validateEmail');
           return !isUserNameValid || !validateEmail(email);
         };
-
-        // const validateEmail = () => {
-        //   const { email } = editedUser;
-        //
-        //   const isEmailValid = email.trim().length > 0;
-        //
-        //   return !isEmailValid;
-        // };
 
         return (
           <div key={id} className="row">

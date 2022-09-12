@@ -2,7 +2,7 @@
   text-align: center;
   .button {
     font-size: 16px;
-    background-color: rgb(210, 205, 209);
+    background-color: rgb(131, 210, 113);
     color: #000000;
     border: none;
     padding: 8px 16px;
@@ -16,10 +16,10 @@
 
 .table {
   .row {
-    margin: 25px;
+    margin: 5px;
     display: flex;
     flex-direction: row;
-    background-color: darkgray;
+    background-color: #94c6ff;
     .col {
       width: 25%;
       padding-top: 5px;
